@@ -61,7 +61,7 @@ pip install --upgrade pip
 Install the development dependencies:
 
 ```bash
-pip install -r requirements/development.txt
+pip install -r requirements.txt
 ```
 
 This will install:
