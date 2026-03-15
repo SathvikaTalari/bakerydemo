@@ -220,6 +220,9 @@ WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [
     ("ar", "Arabic"),
 ]
 
+# Custom authentication form that respects password reset settings
+WAGTAILADMIN_USER_LOGIN_FORM = "bakerydemo.base.forms.CustomAuthenticationForm"
+
 WAGTAILIMAGES_AVIF_QUALITY = 60
 
 ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD", "changeme")

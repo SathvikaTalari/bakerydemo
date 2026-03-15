@@ -1,0 +1,20 @@
+{% extends "wagtailadmin/base_login.html" %}
+{% load i18n wagtailadmin_tags %}
+
+{% block login_form %}
+<form method="post" class="login-form">
+    {% csrf_token %}
+
+    <h1 class="auth-form__title">{% trans 'Sign in to Wagtail' %}</h1>
+
+    {% include "wagtailadmin/shared/login_form_fields.html" %}
+
+    <button type="submit" class="button">{% trans 'Sign in' %}</button>
+
+    {% if form.password_reset_enabled %}
+    <p class="login-form__footer-note">
+        <a href="{% url 'wagtailadmin_password_reset' %}">{% trans 'Forgotten password?' %}</a>
+    </p>
+    {% endif %}
+</form>
+{% endblock %}
